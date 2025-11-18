@@ -36,3 +36,22 @@ const network = new NeuralNetwork([10, 5, 3]);
 
 // Verificar salud del sistema
 const health = felinuxs_0_1.getSystemHealth();
+
+📜 Licencia
+Copyright (c) 2024 Félix José Martínez González
+
+Bajo la FELinuxs Autonomous Governance License v1.0
+
+<div align="center">
+FELinuxs - Donde la Autonomía Encuentra la Responsabilidad
+
+</div> ```
+
+[ ] Commit new file
+   ⬇️ **Escribe aquí:** ⬇️
+Commit message:  📝 Add README.md with project documentation
+
+[ ] Add description (optional)
+
+[🟢 Commit new file]  ← ¡HAZ CLIC AQUÍ!
+
