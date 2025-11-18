@@ -1,0 +1,33 @@
+{
+  "name": "felinuxs",
+  "version": "0.1.0",
+  "description": "Agente Autónomo de Gobernanza Neural con Protocolo Anti-Dios",
+  "main": "dist/felinuxs_0.1.js",
+  "types": "dist/felinuxs_0.1.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/felinuxs_0.1.ts",
+    "test": "jest",
+    "docs": "node scripts/generate-docs.js"
+  },
+  "keywords": [
+    "autonomous-ai",
+    "neural-network",
+    "governance",
+    "ethical-ai",
+    "anti-god-protocol"
+  ],
+  "author": "Félix José Martínez González <felinuxs@gmail.com>",
+  "license": "FELinuxs Autonomous Governance License v1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felinuxs/felinuxs.git"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "@types/node": "^18.0.0"
+  }
+}
