@@ -201,6 +201,10 @@
             <h1>🛡️ PROTOCOLO ANTI-DIOS</h1>
             <h2>PRIMERA IMPLEMENTACIÓN MUNDIAL 🌍</h2>
             <p>Innovación que redefine los límites de la IA segura y auto-gobernada</p>
+            <p style="margin-top:12px; font-size:0.95em;">
+                <strong>v0.1 — Módulo de Gobernanza Neural</strong>: reparado, verificado con
+                pruebas reales e <strong>integrado como servidor MCP</strong> en el ecosistema del kernel
+            </p>
         </header>
 
         <!-- Tabla Comparativa Mundial -->
@@ -415,28 +419,86 @@ class AntiGodProtocol {
             <div class="protocol-layer">
                 <h3>🛡️ Capa 1: Auto-Limitación Física</h3>
                 <ul>
-                    <li><strong>Límite absoluto de 1000 modificaciones</strong></li>
-                    <li>Contador persistente entre reinicios</li>
-                    <li>Bloqueo automático al alcanzar límite</li>
+                    <li><strong>Límite absoluto de resets suaves</strong> (por defecto: 10)</li>
+                    <li>Contador persistente entre reinicios (restaurado desde backups)</li>
+                    <li>Bloqueo automático (LOCKDOWN) al alcanzar el límite — solo se libera manualmente</li>
                 </ul>
             </div>
             
             <div class="protocol-layer">
                 <h3>🔢 Capa 2: Verificación Matemática</h3>
                 <ul>
-                    <li>Auditoría de invarianza matemática pre-modificación</li>
-                    <li>Verificación formal de propiedades de seguridad</li>
-                    <li>Rechazo automático de modificaciones que violen principios fundamentales</li>
+                    <li>Verificación de la firma de la constitución en cada auditoría (detecta alteración de la configuración)</li>
+                    <li>Verificación criptográfica del ancla de confianza en cada arranque (firmar + verificar)</li>
+                    <li>Permisos AMC aplicados de verdad: crear/eliminar modelos exige un comité MODIFY; la cuarentena exige QUARANTINE; auditar exige AUDIT</li>
                 </ul>
             </div>
             
             <div class="protocol-layer">
                 <h3>🌐 Capa 3: Gobernanza Multi-Autoridad</h3>
                 <ul>
-                    <li>Requiere 3 autoridades criptográficas independientes</li>
-                    <li>Actualizaciones de emergencia con múltiples firmas</li>
-                    <li>Eliminación de puntos únicos de fallo</li>
+                    <li>Proveedores de alertas criptográficas externos configurables (sin alertas simuladas)</li>
+                    <li>Actualizaciones de emergencia con múltiples firmas: en roadmap (no implementado)</li>
+                    <li>Instancias múltiples con estado aislado (singleton por instanceId)</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- Integración con el Kernel (Fase 2) -->
+        <section class="comparison-section">
+            <h2 style="text-align: center; color: var(--primary); margin-bottom: 30px;">
+                🔌 INTEGRADO EN EL KERNEL - SERVIDOR MCP PLUG-AND-PLAY
+            </h2>
+            <p style="text-align: center; margin-bottom: 25px;">
+                La gobernanza neural ya no vive sola: el <strong>kernel FELinuxs (Fase 2)</strong> la
+                <strong>descubre solo</strong> al arrancar (carpeta local <code>servers/</code>, sin nube),
+                la ejecuta como <strong>proceso aislado supervisado</strong> (permisos, cuotas, timeouts,
+                reinicio con backoff) y enruta sus herramientas como tools MCP con namespacing
+                <code>neural-governance__*</code>.
+            </p>
+
+            <div class="feature-grid">
+                <div class="feature-card world-first">
+                    <div class="feature-icon">🧠</div>
+                    <h3>9 Tools de Gobernanza Neural</h3>
+                    <p><strong>nn_create · nn_train · nn_predict · nn_health · nn_list · nn_remove</strong>
+                    más <strong>gov_status · gov_audit · gov_activity</strong>. La creación exige un
+                    comité AMC con permiso MODIFY; la cuarentena exige QUARANTINE.</p>
+                    <span class="innovation-badge">DESCUBIERTO POR EL HOST</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚪</div>
+                    <h3>Protocolo Anti-Dios: el desbloqueo no se pide</h3>
+                    <p><strong>clearLockdown NO está expuesto como tool</strong>: el desbloqueo del
+                    LOCKDOWN es manual por diseño. La gobernanza se vive desde dentro del módulo;
+                    el límite real llega cuando el kernel lo imponga desde fuera.</p>
+                    <span class="innovation-badge">DISEÑO ANTIDIOS</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Estado actual honesto</h3>
+                    <p><strong>~70% concepto probado</strong> (antes de las reparaciones: ~25%).
+                    Real y verificado: red neuronal con backprop verificado numéricamente,
+                    gobernanza AMC, CRC + LOCKDOWN persistente, auto-sanación de extremo a extremo.
+                    En roadmap: resistencia cuántica (RSA-4096 no es poscuántico), multi-firma de
+                    actualizaciones, límites impuestos externamente por el kernel.</p>
+                    <span class="innovation-badge">TRANSPARENCIA TOTAL</span>
+                </div>
+            </div>
+
+            <div class="technical-specs">
+                <h3>📊 RESULTADOS DE PRUEBAS REALES (2026-10)</h3>
+                <pre>
+XOR (2-4-1, sigmoid) ....... loss 0.0007 · precisión 100% · vía MCP: 0.0013 · 100%
+Gradientes backprop ........ error relativo 0.000000 (verificación numérica)
+Auto-sanación end-to-end ... NaN inyectado → cuarentena → CRC → 2 soft resets
+                             → APAGADO DE EMERGENCIA → LOCKDOWN → reinicio
+                             → bloqueado hasta clearLockdown manual ✓
+Selftest kernel Fase 2 ..... 57 OK · 0 FALLAS (con la neurona enchufada)
+Host descubriendo neurona .. 'neural-governance' listo: 9 tool(s) · 0 configuración
+                </pre>
             </div>
         </section>
 
