@@ -1,3 +1,37 @@
+/**
+ * ============================================================================
+ * FELINUXS — Etapa 0.1  ·  ARCHIVO HISTÓRICO (NO ES CÓDIGO DE PRODUCCIÓN)
+ * ============================================================================
+ *
+ * Este archivo pertenece al ORIGEN del proyecto. Explora la gobernanza interna
+ * de modelos neuronales —una dirección distinta— y NO forma parte del núcleo
+ * de contención actual de FELINUXS. Se conserva como registro del recorrido.
+ *
+ * ADVERTENCIA SOBRE SU CONTENIDO
+ * ------------------------------
+ * Varios nombres y estructuras de este archivo son ASPIRACIONALES y no se
+ * corresponden con lo que el código hace realmente. En concreto:
+ *
+ *   - `CryptoAuthorityMonitor.scanSecurityAlerts()` devuelve datos SIMULADOS.
+ *     La firma `'simulated_signature_low'` y la autoridad
+ *     `'FELINUXS_CRYPTO_COUNCIL'` son marcadores de ejemplo. No existe ninguna
+ *     autoridad criptográfica externa; nada aquí se usa para tomar decisiones.
+ *
+ *   - `QuantumResistantCrypto` usa RSA-4096 (rompible por computación cuántica)
+ *     junto a AES-256-GCM y SHA3-512 (estos sí resistentes). El nombre era
+ *     aspiracional, no una garantía técnica.
+ *
+ *   - Las métricas de los "AMC" (`accuracy: 0.98`, etc.) son valores
+ *     ILUSTRATIVOS. Sus "permisos" se almacenan pero nunca se aplican.
+ *
+ *   - El umbral de gobernanza (`minFunctionalThreshold`) mide RENDIMIENTO
+ *     (operaciones/segundo), no seguridad.
+ *
+ * En resumen: es un experimento temprano, no una implementación endurecida.
+ * No debe usarse como base de nada. El proyecto actual es otra cosa.
+ * ============================================================================
+ */
+
 import { 
     createHash, 
     randomBytes, 
